@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro - SportClub</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+      .navbar {
+        background-color: #2E1A47 !important;
+      }
+      .navbar .nav-link {
+        color: white !important;
+      }
+      .navbar .btn-outline-dark {
+        color: white !important;
+        border-color: white !important;
+      }
+      .bg-purple-main {
+        background-color: #2E1A47;
+        /* Asegura que el fondo cubra toda la pantalla, pero permite crecer si el form es muy largo */
+        min-height: 100vh; 
+      }
+    </style>
+  </head>
+  <body> 
+
+    <nav id="mainNav" class="navbar navbar-expand-sm sticky-top border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="Imagenes/logo_empresa_letra_v1.png" alt="SportClub" height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#nosotros">Nuestro Objetivo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#reservas">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#vision">Nuestra Visión</a> 
+            </li> 
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-outline-dark px-4 rounded-pill fw-bold" href="index.html" role="button">
+                <i class="bi bi-person-circle me-2"></i> Mi cuenta
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-purple-main d-flex align-items-center py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-5">
+            
+            <div class="card shadow border-0 rounded-4 my-4">
+              <div class="card-body p-4 p-md-5">
+                
+                <div class="text-center mb-4">
+                  <h2 class="fw-bold" style="color: #2E1A47;">Registro</h2>
+                </div>
+
+                <form action="/submit" method="post">
+                  
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label fw-bold">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="edad" class="form-label fw-bold">Edad:</label>
+                    <input type="number" id="edad" name="edad" class="form-control" placeholder="Ingrese su edad">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Correo electrónico:</label>
+                    <input type="email" id="email" name="correo" class="form-control" placeholder="nombre@correo.com" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label fw-bold">Contraseña:</label>
+                    <input type="password" id="password" name="contrasena" class="form-control" placeholder="Cree una contraseña" required>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="sports" class="form-label fw-bold">Deporte de interés:</label>
+                    <select id="sports" name="deporte" class="form-select">
+                      <option selected>Seleccione un deporte...</option>
+                      <option value="Futbol">Futbol</option>
+                      <option value="Basket">Basketball</option>
+                      <option value="Tennis">Tenis</option>
+                      <option value="Natacion">Natacion</option>
+                    </select>
+                  </div>
+
+                  <div class="d-grid mb-4">
+                    <button type="submit" class="btn fw-bold text-dark" style="background-color: #F2B705;">
+                      Registrarse
+                    </button>
+                  </div>
+
+                  <div class="text-center">
+                    <a href="index.html" class="text-decoration-none" style="color: #2E1A47;">¿Ya tienes cuenta? Inicia sesión</a>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-5 border-top" style="background-color: #2E1A47; color: white;">
+      <div class="container text-center">
+        <p class="mb-0" style="opacity: 0.7;">&copy; 2026 SportClub, Inc. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
