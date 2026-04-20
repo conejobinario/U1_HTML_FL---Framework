@@ -72,44 +72,55 @@
   </head>
   <body class="bg-dashboard"> 
     
-    <nav id="mainNav" class="navbar navbar-expand-sm sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="Imagenes/logo_empresa_letra_v1.png" alt="SportClub" height="45">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Usuarios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Estadísticas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Configuración</a></li>
-          </ul>
-          <div class="d-flex gap-2">
-            <button class="btn btn-outline-light btn-sm px-3">Editar Perfil</button>
-            <a href="index.html" class="btn btn-light btn-sm text-danger fw-bold px-3">Cerrar Sesión</a>
+    <header>
+      <nav id="mainNav" class="navbar navbar-expand-sm sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="Imagenes/logo_empresa_letra_v1.png" alt="SportClub" height="45">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Usuarios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Estadísticas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Configuración</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light btn-sm px-3">Editar Perfil</button>
+              <a href="index.html" class="btn btn-light btn-sm text-danger fw-bold px-3">Cerrar Sesión</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav> 
+      </nav> 
 
-    <div class="container py-4">
-      <h1 class="h3 fw-bold text-dark mb-1">Panel de Administración</h1>
-      <p class="text-muted">Control total del sistema SportClub</p>
-    </div>
+      <div class="container py-4">
+        <h1 class="h3 fw-bold text-dark mb-1">Panel de Administración</h1>
+        <p class="text-muted">Control total del sistema SportClub</p>
+      </div>
+    </header>
 
     <main class="container pb-5">
       <div class="row g-4"> 
         
-        <div class="col-lg-3">
-          <div class="card h-100 shadow-sm">
+        <section class="col-lg-3">
+          <article class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-danger fw-bold mb-4">Búsqueda de clases</h5>
-              <form class="d-flex mb-4" role="search">
-                <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                <button class="btn btn-sm btn-outline-danger" type="submit">Buscar</button>
+              <h2 class="card-title text-danger fw-bold mb-4 h5">Búsqueda de clases</h2>
+              
+              <form class="d-flex mb-4">
+                <select class="form-select form-select-sm me-2" aria-label="Seleccionar clase">
+                  <option selected disabled>Elige una clase...</option>
+                  <option value="1">Spinning</option>
+                  <option value="2">CrossFit</option>
+                  <option value="3">Yoga</option>
+                  <option value="4">Boxeo</option>
+                  <option value="5">HIIT</option>
+                  <option value="6">Zumba</option>
+                </select>
+                <button class="btn btn-sm btn-outline-danger" type="button">Buscar</button>
               </form>
               <div class="list-group list-group-flush small">
                 <div class="list-group-item d-flex justify-content-between align-items-center px-0 bg-transparent border-bottom">
@@ -126,28 +137,28 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
 
-        <div class="col-lg-6">
-          <div class="card h-100 shadow-sm">
+        <section class="col-lg-6">
+          <article class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-danger fw-bold mb-4">Gestión de Usuarios</h5>
+              <h2 class="card-title text-danger fw-bold mb-4 h5">Gestión de Usuarios</h2>
               <div class="table-responsive">
                 <table class="table align-middle small text-center mb-0">
                   <thead class="table-light text-secondary text-uppercase" style="font-size: 0.75rem;">
                     <tr>
-                      <th class="border-0">Nombre</th>
-                      <th class="border-0">Email</th>
-                      <th class="border-0">Rol</th>
-                      <th class="border-0">Acción</th>
+                      <th scope="col" class="border-0">Nombre</th>
+                      <th scope="col" class="border-0">Email</th>
+                      <th scope="col" class="border-0">Rol</th>
+                      <th scope="col" class="border-0">Acción</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="border-bottom">
                       <td class="text-start ps-3">
                         <div class="avatar-mini d-inline-block me-2 align-middle">
-                          <img src="Imagenes/usuario1.jpg">
+                          <img src="Imagenes/usuario1.jpg" alt="Usuario">
                         </div> 
                         <span class="fw-bold">Yuji Itadori</span>
                       </td>
@@ -158,7 +169,7 @@
                     <tr class="border-bottom">
                       <td class="text-start ps-3">
                         <div class="avatar-mini d-inline-block me-2 align-middle">
-                          <img src="Imagenes/usuario2.jpg">
+                          <img src="Imagenes/usuario2.jpg" alt="Usuario">
                         </div> 
                         <span class="fw-bold">Nobara Kugisaki</span>
                       </td>
@@ -169,7 +180,7 @@
                     <tr>
                       <td class="text-start ps-3">
                         <div class="avatar-mini d-inline-block me-2 align-middle">
-                          <img src="Imagenes/coach1.jpg">
+                          <img src="Imagenes/coach1.jpg" alt="Coach">
                         </div> 
                         <span class="fw-bold">Satoru Gojo</span>
                       </td>
@@ -183,13 +194,13 @@
                 </table>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
 
-        <div class="col-lg-3">
-          <div class="card shadow-sm mb-4 border-0">
+        <section class="col-lg-3">
+          <article class="card shadow-sm mb-4 border-0">
             <div class="card-body">
-              <h5 class="card-title text-danger fw-bold mb-4">Reportes Generales de Ventas</h5>
+              <h2 class="card-title text-danger fw-bold mb-4 h5">Reportes Generales de Ventas</h2>
               <div class="d-grid gap-2">
                 <button class="btn btn-outline-dark btn-sm d-flex justify-content-between align-items-center">
                   <span>Informe Mensual</span> <span class="badge bg-dark">Descargar</span>
@@ -199,15 +210,15 @@
                 </button>
               </div>
             </div>
-          </div>
-          <div class="card shadow-sm border-0">
+          </article>
+          <article class="card shadow-sm border-0">
             <div class="card-body">
               <button class="btn btn-danger w-100 py-3 fw-bold rounded-3">
                 CONFIGURAR SISTEMA
               </button>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
 
       </div> 
     </main>
