@@ -31,11 +31,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
         // 3) Redirección: Redirigir a diferentes dashboards según rol [cite: 12, 13]
         if (foundUser.role === "admin") {
-            window.location.href = "dashboard_admin.html";
+            window.location.href = "dashboard-admin.html";
         } else if (foundUser.role === "coach") {
-            window.location.href = "dashboard_coach.html";
+            window.location.href = "dashboard-coach.html";
         } else {
-            window.location.href = "dashboard_user.html";
+            window.location.href = "dashboard-usuario.html";
         }
     } else {
         // 4) Manejo de errores: Mostrar mensaje en pantalla (NO usar alert) [cite: 14, 15]
